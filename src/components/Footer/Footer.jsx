@@ -11,8 +11,8 @@ const Footer = () => {
         <div>
           <a href="/">
             <h1 className="text-lg font-medium text-white pb-2">
-              <strong className="text-white font-extrabold mr-0.5">Job</strong>
-              Portal
+              <span className="text-white font-extrabold mr-0.5">Fin</span>
+              der
             </h1>
           </a>
           <p className="text-white text-sm font-thin leading-6 opacity-90 text-start">

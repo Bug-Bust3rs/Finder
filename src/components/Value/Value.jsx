@@ -49,7 +49,7 @@ const Value = () => {
         <div className="valuecard my-10 bg-blueColor flex flex-wrap gap-10 justify-between items-center rounded-xl p-8 md:mt-20 md:mb-8 sm:p-16 sm:col-span-3 bg-cover">
           <div className="left">
             <p className="text-blueColor font-extrabold text-2xl mb-3">
-              Ready to switch a carrer?{" "}
+              Ready to Find New Friends?{" "}
             </p>
             <p className="font-extrabold text-2xl ">Let's Get Started ! </p>
           </div>

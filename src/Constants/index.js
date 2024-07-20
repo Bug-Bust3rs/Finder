@@ -2,11 +2,11 @@ import { logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8 } from '../Asset
 import {Image1,Image2,Image3} from '../Assets/Images'
 
 export const navLinks = [
-    { href: "#jobs", label: "Jobs" },
-    { href: "#companies", label: "Companies" },
+    { href: "#jobs", label: "Friends" },
+    { href: "#companies", label: "Mentors" },
     { href: "#about", label: "About" },
     { href: "#contact", label: "Contact" },
-    { href: "#blog", label: "Blog" },
+    { href: "#blog", label: "Feed" },
     { href: "#login", label: "Login" },
     { href: "#register", label: "Register" },
 ];
