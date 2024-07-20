@@ -69,6 +69,11 @@ All contributions must be made through the `dev` branch. If you create a pull re
 ### Steps for Run Project
 
 
+**At First Install concurrently**
+
+     
+     pnpm add concurrently
+
 1. **Install All Dependencies 🚢**
 
      ```bash

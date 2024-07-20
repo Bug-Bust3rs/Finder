@@ -35,7 +35,11 @@
 
 ## ⚙️ Installation
 
+**At First Install concurrently**
 
+     
+     pnpm add concurrently
+     
 1. **Install All Dependencies 🚢**
 
      ```bash
