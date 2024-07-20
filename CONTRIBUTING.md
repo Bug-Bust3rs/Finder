@@ -66,4 +66,29 @@ All contributions must be made through the `dev` branch. If you create a pull re
 5. **Push** your changes to your forked repository.
 6. **Create a pull request** from your new branch to the `dev` branch in the main repository.
 
+### Steps for Run Project
+
+
+1. **Install All Dependencies 🚢**
+
+     ```bash
+     pnpm install:all
+     ```
+2. **Run Project 🚢**
+
+     ```bash
+     pnpm dev:all
+     ```     
+3. **Run Frontend 🚢**
+
+     ```bash
+     pnpm dev:frontend
+     ```       
+4. **Run Frontend 🚢**
+
+     ```bash
+     pnpm dev:backend
+     ``` 
+
+
 Thank you for your cooperation and happy coding! 🚀
