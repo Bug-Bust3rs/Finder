@@ -1,4 +1,4 @@
-import React from "react";
+
 import { ValuesData } from "../../Constants";
 
 const Value = () => {
