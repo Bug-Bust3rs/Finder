@@ -6,6 +6,7 @@ import Search from "./Search/Search";
 import Value from "./Value/Value";
 import HomePage from "./Home/HomePage";
 import Login from "./Auth/Login"
+import Register from "./Auth/Register"
 
 
-export{Home,Footer,Header,Jobs,Search,Value,HomePage,Login}
+export{Home,Footer,Header,Jobs,Search,Value,HomePage,Login,Register}
