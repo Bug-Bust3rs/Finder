@@ -6,11 +6,10 @@ const mongoSanitize = require('express-mongo-sanitize')
 const CheckError = require('./utlis/checkError')
 const limiter = require('./utlis/rateLimitter')
 const addLogger = require('./utlis/appLogger')
-// const { testRoute } = require('./controllers/authController')
 const { config } = require('./configs/config')
-// const authRouter = require('./routes/authRoutes')
+const authRouter = require('./routes/authRoutes')
 const app = express()
-// require('./database/connectDB')
+require('./database/connectDb')
 
 app.use(express.json())
 app.use(compression())
@@ -29,7 +28,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
     res.status(200).json({ status: true })
 })
-// app.use('/api/auth', authRouter)
+app.use('/api/v0.1/auth', authRouter)
 app.all('*', (req, res) => {
     const error = new CheckError(
         `Can't find ${req.originalUrl} on this server!`,
