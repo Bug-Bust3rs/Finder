@@ -63,7 +63,7 @@
 
 ## ❤️ Contributing
 
-We welcome contributions to UNITE!
+We welcome contributions to FINDER!
 
 To get started, please check out the [CONTRIBUTING.md](./CONTRIBUTING.md) file for guidelines on how to contribute. Here are some key points:
 
@@ -77,9 +77,9 @@ To get started, please check out the [CONTRIBUTING.md](./CONTRIBUTING.md) file f
 
 **_Note: If contributions do not follow the guidelines specified in the [CONTRIBUTING.md](./CONTRIBUTING.md) file, the pull request will not be accepted ❌._**
 
-<h2 align = "center">Contributors of Unite 🚀</h2>
+<h2 align = "center">Contributors of Finder 🚀</h2>
 <div align = "center">
-<a href="https://github.com/Bug-Bust3rs/UNITE/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Bug-Bust3rs/UNITE" />
+<a href="https://github.com/Bug-Bust3rs/Finder/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Bug-Bust3rs/Finder" />
 </a>
 </div>
