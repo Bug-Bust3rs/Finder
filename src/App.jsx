@@ -1,5 +1,5 @@
 
-import { Footer, Header, HomePage, Login  } from "./components";
+import { Footer, Header, HomePage, Login, ProfileSetup, Register  } from "./components";
 import { Route, Routes } from "react-router-dom";
 
 
@@ -14,9 +14,17 @@ const App = () => {
             path="/"
             element={<HomePage />}
           />
-            <Route
+          <Route
             path="/login"
             element={<Login />}
+          />
+          <Route
+            path="/register"
+            element={<Register />}
+          />
+          <Route
+            path="/profile-setup"
+            element={<ProfileSetup />}
           />
 
 
