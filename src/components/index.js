@@ -5,6 +5,7 @@ import Header from "./Header/Header";
 import Search from "./Search/Search";
 import Value from "./Value/Value";
 import HomePage from "./Home/HomePage";
+import Login from "./Auth/Login"
 
 
-export{Home,Footer,Header,Jobs,Search,Value,HomePage}
+export{Home,Footer,Header,Jobs,Search,Value,HomePage,Login}

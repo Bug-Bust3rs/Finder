@@ -1,5 +1,5 @@
 
-import { Footer, Header, HomePage  } from "./components";
+import { Footer, Header, HomePage, Login  } from "./components";
 import { Route, Routes } from "react-router-dom";
 
 
@@ -13,6 +13,10 @@ const App = () => {
           <Route
             path="/"
             element={<HomePage />}
+          />
+            <Route
+            path="/login"
+            element={<Login />}
           />
 
 

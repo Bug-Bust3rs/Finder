@@ -1,7 +1,4 @@
 
-import React from 'react';
-
-
 const Home = () => {
   return (
     <main className="flex flex-col items-center justify-center text-center py-24 min-h-screen font-poppins  text-black dark:text-white">
