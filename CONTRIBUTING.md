@@ -71,8 +71,24 @@ All contributions must be made through the `dev` branch. If you create a pull re
 
 **At First Install concurrently**
 
-     
+    
      pnpm add concurrently
+     
+
+
+**Create .env**
+
+     
+     touch .env
+     
+
+**Add Secrets**
+
+   ```
+   MONGOURI=mongodb+srv://yourname:yourpassword@cluster0.urng3cb.mongodb.net/?retryWrites=true&w=majority&appName=Finder
+   JWT_SECRET=askdbvavkhbhksdvkbshvbhjsvjhsbvhbjsdvbhj
+   JWT_COOKIE_EXPIRES_IN=3d
+  ```     
 
 1. **Install All Dependencies 🚢**
 
