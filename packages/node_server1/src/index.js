@@ -8,6 +8,8 @@ const limiter = require('./utlis/rateLimitter')
 const addLogger = require('./utlis/appLogger')
 const { config } = require('./configs/config')
 const authRouter = require('./routes/authRoutes')
+const userRouter = require('./routes/userRoutes')
+const feedRouter = require('./routes/postsRoutes');
 const app = express()
 require('./database/connectDb')
 
@@ -28,7 +30,10 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
     res.status(200).json({ status: true })
 })
-app.use('/api/v0.1/auth', authRouter)
+app.use('/api/v0.1/auth', authRouter);
+app.use('/api/v0.1/users', userRouter)
+app.use('/api/v0.1/feeds', feedRouter)
+
 app.all('*', (req, res) => {
     const error = new CheckError(
         `Can't find ${req.originalUrl} on this server!`,
