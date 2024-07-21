@@ -1,5 +1,5 @@
 
-import { Footer, Header, HomePage, Login, Register  } from "./components";
+import { Footer, Header, HomePage, Login, ProfileSetup, Register  } from "./components";
 import { Route, Routes } from "react-router-dom";
 
 
@@ -21,6 +21,10 @@ const App = () => {
           <Route
             path="/register"
             element={<Register />}
+          />
+          <Route
+            path="/profile-setup"
+            element={<ProfileSetup />}
           />
 
 
