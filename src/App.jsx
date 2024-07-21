@@ -1,5 +1,6 @@
 
 import { Footer, Header, Jobs, Search, Value } from "./components";
+import { Route, Routes } from "react-router-dom";
 
 
 const App = () => {
@@ -9,7 +10,7 @@ const App = () => {
         <Header />
         <main>
           <Search />
-          {/* <Jobs /> */}
+          <Jobs />
           <Value />
         </main>
         <Footer />
