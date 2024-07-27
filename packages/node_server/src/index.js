@@ -1,16 +1,52 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const { PORT, MONGO_URI } = require('./configs/config');
-const authRouter = require('./routes/authRouter');
+const express = require('express')
+const cookie = require('cookie-parser')
+const compression = require('compression')
+const helmet = require('helmet')
+const mongoSanitize = require('express-mongo-sanitize')
+const CheckError = require('./utlis/checkError')
+const limiter = require('./utlis/rateLimitter')
+const addLogger = require('./utlis/appLogger')
+const { config } = require('./configs/config')
+const authRouter = require('./routes/authRoutes')
+const userRouter = require('./routes/userRoutes')
+const feedRouter = require('./routes/postsRoutes');
+const app = express()
+require('./database/connectDb')
 
-const app = express();
+app.use(express.json())
+app.use(compression())
+app.use(mongoSanitize())
+app.use(helmet())
+app.use(limiter)
+app.use(cookie())
 
-app.use(express.json());
+addLogger(app)
 
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.error(err));
+app.use((req, res, next) => {
+    res.setHeader('X-XSS-Protection', '1; mode=block')
+    next()
+})
 
-app.use('/auth', authRouter);
+app.get('/', (req, res) => {
+    res.status(200).json({ status: true })
+})
+app.use('/api/v0.1/auth', authRouter);
+app.use('/api/v0.1/users', userRouter)
+app.use('/api/v0.1/feeds', feedRouter)
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.all('*', (req, res) => {
+    const error = new CheckError(
+        `Can't find ${req.originalUrl} on this server!`,
+        404
+    )
+    res.status(error.statusCode).json({
+        success: false,
+        error: error.message,
+    })
+})
+
+app.listen(config.PORT, () => {
+    console.log(`[⚡] Server Is Running on http://localhost:${config.PORT}`)
+})
+
+module.exports = { app }
